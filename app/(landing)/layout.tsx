@@ -1,12 +1,14 @@
+import { Footer } from "~/components/layout/footer";
 import { NavBar } from "~/components/layout/navbar";
 
-const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
+export default function LandingLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <div>
+    <div className="w-full max-w-[1900px] mx-auto">
       <NavBar />
       {children}
+      <Footer />
     </div>
   );
-};
-
-export default RootLayout;
+}
