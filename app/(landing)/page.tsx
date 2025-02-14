@@ -12,7 +12,7 @@ export default function HomePage() {
           width={1920}
           height={1080}
         />
-        <p className="absolute left-0 top-0 text-white text-5xl font-black">
+        <p className="w-max opacity-40 absolute font-logo top-0 left-1/2 -translate-x-1/2 py-8 text-white text-5xl font-black">
           Safeguarding What Matters Most.
         </p>
       </div>

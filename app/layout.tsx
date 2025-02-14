@@ -1,6 +1,7 @@
 import "./globals.css";
 
-import { Chakra_Petch } from "next/font/google";
+import { Chakra_Petch, Onest } from "next/font/google";
+
 import type { Metadata } from "next";
 
 // const bodyFont = Orbitron({
@@ -12,9 +13,9 @@ const logoFont = Chakra_Petch({
   variable: "--font-logo",
 });
 
-const bodyFont = Chakra_Petch({
+const bodyFont = Onest({
   weight: ["400", "700", "300", "500", "600"],
-  variable: "--font-logo",
+  variable: "--font-body",
 });
 
 export const metadata: Metadata = {
@@ -32,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bodyFont.variable} ${logoFont.variable} font-logo antialiased`}
+        className={`${bodyFont.variable} ${logoFont.variable} font-body antialiased`}
       >
         {children}
       </body>

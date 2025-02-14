@@ -109,7 +109,7 @@ const clients: {
 export const NavBar = () => {
   return (
     <div className="flex gap-0 items-baseline w-full py-6 px-4">
-      <div className="font-logo font-black text-2xl text-teal-600 flex-shrink-0">
+      <div className="font-logo font-black text-xl text-teal-600 flex-shrink-0">
         Optimus Security Services
       </div>
       <div className="bg-accent-foreground w-[0.1rem] self-stretch ml-8 mr-4"></div>
