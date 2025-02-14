@@ -1,16 +1,16 @@
 import "./globals.css";
 
-import { Domine, Orbitron } from "next/font/google";
+import { Chakra_Petch, Orbitron } from "next/font/google";
 
 import type { Metadata } from "next";
 
-const domineFont = Domine({
+const bodyFont = Orbitron({
   variable: "--font-body",
 });
 
-const orbitron = Orbitron({
+const logoFont = Chakra_Petch({
+  weight: ["400", "700"],
   variable: "--font-logo",
-  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${domineFont.className} ${orbitron.variable} antialiased`}
+        className={`${logoFont.className} ${bodyFont.variable} antialiased`}
       >
         {children}
       </body>
