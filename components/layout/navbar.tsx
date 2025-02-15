@@ -1,19 +1,6 @@
 import * as React from "react";
 
 import {
-  Banknote,
-  Book,
-  Car,
-  LucideProps,
-  Shield,
-  ShieldAlert,
-  ShieldCheck,
-  Target,
-  UserCheck,
-  Users,
-  Utensils,
-} from "lucide-react";
-import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
@@ -24,99 +11,21 @@ import {
 } from "~/components/ui/navigation-menu";
 
 import Link from "next/link";
+import { clients } from "~/data/clients";
 import { cn } from "~/lib/utils";
-
-const services: {
-  title: string;
-  href: string;
-  description: string;
-  icon: React.ForwardRefExoticComponent<
-    Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>
-  >;
-}[] = [
-  {
-    title: "Security Services",
-    href: "/services/security-services",
-    description: "Comprehensive security for all needs.",
-    icon: Shield,
-  },
-  {
-    title: "Security Guard",
-    href: "/services/security-guard",
-    description: "Trained guards for round-the-clock safety.",
-    icon: ShieldCheck,
-  },
-  {
-    title: "Security Supervisor",
-    href: "/services/security-supervisor",
-    description: "Experienced supervisors for security oversight.",
-    icon: UserCheck,
-  },
-  {
-    title: "Armed PSO",
-    href: "/services/armed-pso",
-    description: "Armed officers for high-risk protection.",
-    icon: ShieldAlert,
-  },
-  {
-    title: "Gunman",
-    href: "/services/gunman",
-    description: "Licensed gunmen for reliable security.",
-    icon: Target,
-  },
-];
-
-const clients: {
-  title: string;
-  href: string;
-  description: string;
-  icon: React.ForwardRefExoticComponent<
-    Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>
-  >;
-}[] = [
-  {
-    title: "All Clients",
-    href: "/clients/all",
-    description: "Our diverse client base across industries.",
-    icon: Users,
-  },
-  {
-    title: "Auto Sector",
-    href: "/clients/auto-sector",
-    description: "Comprehensive security for the automotive industry.",
-    icon: Car,
-  },
-  {
-    title: "Educational Institutions",
-    href: "/clients/education",
-    description: "Safety solutions for schools, colleges, and universities.",
-    icon: Book,
-  },
-  {
-    title: "Food & Beverage Sector",
-    href: "/clients/food-beverage",
-    description: "Reliable security for food and beverage establishments.",
-    icon: Utensils,
-  },
-  {
-    title: "Banking & Finance",
-    href: "/clients/banking-finance",
-    description: "Secure environments for banks and financial services.",
-    icon: Banknote,
-  },
-];
+import { services } from "~/data/services";
 
 export const NavBar = () => {
   return (
     <div className="flex gap-0 items-baseline w-full py-6 px-4">
-      <div className="font-logo font-black text-xl text-teal-600 flex-shrink-0">
+      <div className="font-logo font-black text-2xl text-teal-600 flex-shrink-0">
         Optimus Security Services
       </div>
       <div className="bg-accent-foreground w-[0.1rem] self-stretch ml-8 mr-4"></div>
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <Link href="/home" legacyBehavior passHref>
+            <Link href="/" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 Home
               </NavigationMenuLink>
@@ -126,7 +35,7 @@ export const NavBar = () => {
           <NavigationMenuItem>
             <NavigationMenuTrigger>Services</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-1 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+              <ul className="grid w-[400px] gap-1 p-4 md:w-[500px] md:grid-cols-3 lg:w-[600px] ">
                 {services.map((component) => (
                   <ListItem
                     icon={component.icon}
@@ -144,7 +53,7 @@ export const NavBar = () => {
           <NavigationMenuItem>
             <NavigationMenuTrigger>Clients</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+              <ul className="grid w-[400px] gap-1 p-4 md:w-[500px] md:grid-cols-3 lg:w-[600px] ">
                 {clients.map((component) => (
                   <ListItem
                     icon={component.icon}
