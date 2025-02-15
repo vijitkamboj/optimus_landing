@@ -72,7 +72,7 @@ export default {
       },
 
       animation: {
-        fadein: "in 1s ease-in-out",
+        fadein: "in 0.4s ease-in-out",
       },
     },
   },
