@@ -11,11 +11,13 @@ import type { Metadata } from "next";
 const logoFont = Chakra_Petch({
   weight: ["400", "700", "300", "500", "600"],
   variable: "--font-logo",
+  subsets: ["latin"],
 });
 
 const bodyFont = Onest({
   weight: ["400", "700", "300", "500", "600"],
   variable: "--font-body",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {

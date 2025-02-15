@@ -1,23 +1,21 @@
+import HeroImage from "~/public/camera.jpg";
 import Image from "next/image";
 
 export default function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <div className="max-h-[620px] overflow-hidden bg-black relative">
-        <Image
-          src="/camera.jpg"
-          alt="security"
-          className="opacity-60"
-          width={1710}
-          height={620}
-          quality={100}
-          placeholder="blur"
-          blurDataURL={
-            "|KIhdA-O-ns:IVxvIoRjxa~WnOMxaeRjofofj@WB%2M{MxxuxvR*Rjj[WBt6ofofbIkCM{WAt7ofRjRjofxaf6WAoffRWBt7s:ayRkRjWBofofofj@j[WBWBaeoft7kCWWWBf6ofoffkkCWCRjj[WBj[j[WBWBt7ayfQof"
-          }
-        />
-        <p className="w-max opacity-70 absolute font-logo top-0 left-1/2 -translate-x-1/2 py-28 text-background text-5xl font-black">
+      <div className="max-h-[620px] overflow-hidden relative">
+        <div className="bg-black">
+          <Image
+            src={HeroImage}
+            alt="security"
+            quality={100}
+            className="opacity-50"
+            placeholder="blur"
+          />
+        </div>
+        <p className="w-max text-background/50 absolute font-logo top-1/3 -translate-y-1/6 left-1/2 -translate-x-1/2 text-5xl font-black">
           Safeguarding What Matters Most.
         </p>
 
