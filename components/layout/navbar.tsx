@@ -35,7 +35,7 @@ export const NavBar = () => {
           <NavigationMenuItem>
             <NavigationMenuTrigger>Services</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-1 p-4 md:w-[500px] md:grid-cols-3 lg:w-[600px] ">
+              <ul className="grid w-[400px] gap-2 p-4 md:w-[500px] md:grid-cols-3 lg:w-[600px] ">
                 {services.map((component) => (
                   <ListItem
                     icon={component.icon}
@@ -53,7 +53,7 @@ export const NavBar = () => {
           <NavigationMenuItem>
             <NavigationMenuTrigger>Clients</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-1 p-4 md:w-[500px] md:grid-cols-3 lg:w-[600px] ">
+              <ul className="grid w-[400px] gap-2 p-4 md:w-[500px] md:grid-cols-4 lg:w-[800px] ">
                 {clients.map((component) => (
                   <ListItem
                     icon={component.icon}
@@ -107,8 +107,10 @@ const ListItem = React.forwardRef<
           )}
           {...props}
         >
-          <div className="flex items-center gap-2">
-            {Icon && <Icon size={20} className="text-muted-foreground" />}
+          <div className="flex items-center gap-1">
+            {Icon && (
+              <Icon size={20} className="text-muted-foreground flex-shrink-0" />
+            )}
             <div className="text-sm font-medium leading-none">{title}</div>
           </div>
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
