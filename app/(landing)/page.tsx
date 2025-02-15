@@ -11,7 +11,7 @@ export default function HomePage() {
             src={HeroImage}
             alt="security"
             quality={100}
-            className="opacity-50"
+            className="opacity-50 transition-opacity animate-fadein"
             placeholder="blur"
           />
         </div>

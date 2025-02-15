@@ -60,6 +60,20 @@ export default {
         logo: "var(--font-logo)",
         body: "var(--font-body)",
       },
+      keyframes: {
+        in: {
+          "0%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "0.5",
+          },
+        },
+      },
+
+      animation: {
+        fadein: "in 1s ease-in-out",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
