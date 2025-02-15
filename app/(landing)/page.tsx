@@ -17,7 +17,7 @@ export default function HomePage() {
             "|KIhdA-O-ns:IVxvIoRjxa~WnOMxaeRjofofj@WB%2M{MxxuxvR*Rjj[WBt6ofofbIkCM{WAt7ofRjRjofxaf6WAoffRWBt7s:ayRkRjWBofofofj@j[WBWBaeoft7kCWWWBf6ofoffkkCWCRjj[WBj[j[WBWBt7ayfQof"
           }
         />
-        <p className="w-max opacity-70 absolute font-logo top-0 left-1/2 -translate-x-1/2 py-20 text-background text-5xl font-black">
+        <p className="w-max opacity-70 absolute font-logo top-0 left-1/2 -translate-x-1/2 py-28 text-background text-5xl font-black">
           Safeguarding What Matters Most.
         </p>
 
