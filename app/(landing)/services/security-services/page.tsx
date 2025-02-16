@@ -1,3 +1,3 @@
 export default function SecurityServicesPage() {
-  return <div>SecurityServicesPage</div>;
+  return <div>SecurityServicesPage</div>
 }

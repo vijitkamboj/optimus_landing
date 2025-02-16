@@ -1,3 +1,3 @@
 export default function TrainingPage() {
-  return <div>Training</div>;
+  return <div>Training</div>
 }

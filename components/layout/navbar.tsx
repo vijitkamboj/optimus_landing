@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 
 import {
   NavigationMenu,
@@ -8,41 +8,32 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "~/components/ui/navigation-menu";
+} from '~/components/ui/navigation-menu'
 
-import Link from "next/link";
-import { clients } from "~/data/clients";
-import { cn } from "~/lib/utils";
-import { services } from "~/data/services";
+import Link from 'next/link'
+import { clients } from '~/data/clients'
+import { cn } from '~/lib/utils'
+import { services } from '~/data/services'
 
 export const NavBar = () => {
   return (
-    <div className="flex gap-0 items-baseline w-full py-6 px-4">
-      <div className="font-logo font-black text-2xl text-teal-600 flex-shrink-0">
-        Optimus Security Services
-      </div>
-      <div className="bg-accent-foreground w-[0.1rem] self-stretch ml-8 mr-4"></div>
+    <div className="flex w-full items-baseline gap-0 bg-red-300 px-4 py-6">
+      <div className="flex-shrink-0 font-logo text-2xl font-black text-teal-600">Optimus Security Services</div>
+      <div className="ml-8 mr-4 w-[0.1rem] self-stretch bg-accent-foreground"></div>
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Home
-              </NavigationMenuLink>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>Home</NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
             <NavigationMenuTrigger>Services</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-2 p-4 md:w-[500px] md:grid-cols-3 lg:w-[600px] ">
+              <ul className="grid w-[400px] gap-2 p-4 md:w-[500px] md:grid-cols-3 lg:w-[600px]">
                 {services.map((component) => (
-                  <ListItem
-                    icon={component.icon}
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}
-                  >
+                  <ListItem icon={component.icon} key={component.title} title={component.title} href={component.href}>
                     {component.description}
                   </ListItem>
                 ))}
@@ -53,14 +44,9 @@ export const NavBar = () => {
           <NavigationMenuItem>
             <NavigationMenuTrigger>Clients</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-2 p-4 md:w-[500px] md:grid-cols-4 lg:w-[800px] ">
+              <ul className="grid w-[400px] gap-2 p-4 md:w-[500px] md:grid-cols-3 lg:w-[600px]">
                 {clients.map((component) => (
-                  <ListItem
-                    icon={component.icon}
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}
-                  >
+                  <ListItem icon={component.icon} key={component.title} title={component.title} href={component.href}>
                     {component.description}
                   </ListItem>
                 ))}
@@ -70,30 +56,26 @@ export const NavBar = () => {
 
           <NavigationMenuItem>
             <Link href="/about" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                About us
-              </NavigationMenuLink>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>About us</NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
             <Link href="/training" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Training
-              </NavigationMenuLink>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>Training</NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
     </div>
-  );
-};
+  )
+}
 
 const ListItem = React.forwardRef<
-  React.ComponentRef<"a">,
-  React.ComponentPropsWithRef<"a"> & {
-    title: string;
-    icon?: React.ElementType;
+  React.ComponentRef<'a'>,
+  React.ComponentPropsWithRef<'a'> & {
+    title: string
+    icon?: React.ElementType
   }
 >(({ className, title, icon: Icon, children, ...props }, ref) => {
   return (
@@ -102,23 +84,19 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-2 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
+            'block select-none space-y-2 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+            className,
           )}
           {...props}
         >
           <div className="flex items-center gap-1">
-            {Icon && (
-              <Icon size={20} className="text-muted-foreground flex-shrink-0" />
-            )}
+            {Icon && <Icon size={20} className="flex-shrink-0 text-muted-foreground" />}
             <div className="text-sm font-medium leading-none">{title}</div>
           </div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>
         </a>
       </NavigationMenuLink>
     </li>
-  );
-});
-ListItem.displayName = "ListItem";
+  )
+})
+ListItem.displayName = 'ListItem'
