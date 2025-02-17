@@ -1,4 +1,3 @@
-import { AppSidebar } from '~/components/layout/sidebar'
 import { Footer } from '~/components/layout/footer'
 import { NavBar } from '~/components/layout/navbar'
 import { SidebarProvider } from '~/components/ui/sidebar'
