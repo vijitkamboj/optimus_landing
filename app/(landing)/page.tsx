@@ -11,25 +11,25 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <div className="relative max-h-[620px] overflow-hidden">
+      <div className="relative overflow-hidden">
         {/* Hero Image */}
         <div className="bg-black">
           <Image
             src={HeroImage}
             alt="security"
             quality={100}
-            className="animate-fadein opacity-50 transition-opacity"
+            className="min-h-[400px] animate-fadein object-cover opacity-50 transition-opacity"
             placeholder="blur"
           />
         </div>
 
         {/* Hero Moto */}
-        <p className="-translate-y-1/6 absolute left-1/2 top-1/3 w-max -translate-x-1/2 font-logo text-5xl font-black text-background/50">
+        <p className="-translate-y-1/6 absolute left-1/2 top-1/3 hidden w-max -translate-x-1/2 px-4 text-center font-logo text-2xl font-black text-background/50 sm:block sm:text-3xl md:text-4xl lg:text-5xl">
           Safeguarding What Matters Most.
         </p>
 
         {/* Quick contacts */}
-        <div className="absolute bottom-0 left-1/2 grid w-full -translate-x-1/2 grid-cols-4 grid-rows-1 gap-0 text-background">
+        <div className="absolute bottom-0 left-1/2 hidden w-full -translate-x-1/2 grid-cols-1 gap-0 text-background sm:grid-cols-2 lg:grid lg:grid-cols-4">
           <ContactItem title="Email" value="sales@optimussecurityservices.com" />
           <ContactItem title="Location" value="Dwarka, New Delhi-110075" />
           <ContactItem title="Mobile" value="+91-9582872788" />
@@ -38,13 +38,13 @@ export default function HomePage() {
       </div>
 
       {/* Range of services */}
-      <div className="relative flex flex-col items-center gap-8 p-8">
+      <div className="relative flex flex-col items-center gap-8 p-4 md:p-8">
         <div
           className="pointer-events-none absolute inset-0 bg-[url(/texture.svg)] bg-center bg-repeat opacity-5"
           aria-hidden="true"
         ></div>
-        <div className="z-10 p-2 text-3xl font-bold">Range of services</div>
-        <div className="z-10 grid grid-cols-4 gap-6">
+        <div className="z-10 p-2 text-2xl font-bold md:text-3xl">Range of services</div>
+        <div className="z-10 grid grid-cols-1 justify-items-center gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {services.map((service) => (
             <ServiceCard
               key={service.title}
@@ -58,18 +58,18 @@ export default function HomePage() {
       </div>
 
       {/* Different sectors */}
-      <div className="grid grid-cols-[1fr_2fr] items-center gap-10 bg-gradient-to-tr from-teal-900 to-zinc-100 p-12 px-36">
-        <div className="font-logo text-4xl font-black">Diverse Sectors</div>
+      <div className="grid grid-cols-1 items-center gap-6 bg-gradient-to-tr from-teal-900 to-zinc-100 p-6 px-4 md:grid-cols-[1fr_2fr] md:gap-10 md:p-12 md:px-36">
+        <div className="text-center font-logo text-3xl font-black md:text-left md:text-4xl">Diverse Sectors</div>
 
-        <div>
-          <p>
+        <div className="space-y-4">
+          <p className="text-sm md:text-base">
             We specialize in providing top-notch security services across diverse sectors, leveraging our expertise and
             industry experience. Our services cater to renowned industries such as <Highlight>Automobile</Highlight>,{' '}
             <Highlight>Food & Beverage</Highlight>, <Highlight>Finance</Highlight>, <Highlight>Electronics</Highlight>,{' '}
             <Highlight>Real Estate</Highlight>, <Highlight>Healthcare</Highlight>, and <Highlight>Education</Highlight>.
           </p>
 
-          <p>
+          <p className="text-sm md:text-base">
             In the <Highlight>Automobile</Highlight> sector, we ensure precision and protection, while in{' '}
             <Highlight>Finance and Banking</Highlight>, we deliver unmatched security for assets and operations. We
             safeguard high-value assets in <Highlight>Electronics</Highlight>, ensure safe environments in{' '}
@@ -77,7 +77,7 @@ export default function HomePage() {
             and <Highlight>Education</Highlight>.
           </p>
 
-          <p>
+          <p className="text-sm md:text-base">
             Our tailored solutions address the unique needs of each sector, making us a trusted partner for safety and
             security across industries.
           </p>
@@ -89,9 +89,9 @@ export default function HomePage() {
 
 const ContactItem = ({ title, value }: { title: string; value: string }) => {
   return (
-    <div className="col-Highlight-1 flex flex-col bg-foreground/30 px-4 py-8">
-      <div className="font-thin">{title}</div>
-      <div className="font-bold">{value}</div>
+    <div className="flex flex-col bg-foreground/30 px-4 py-4 md:py-8">
+      <div className="text-sm font-thin md:text-base">{title}</div>
+      <div className="truncate text-sm font-bold md:text-base">{value}</div>
     </div>
   )
 }

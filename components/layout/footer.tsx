@@ -2,7 +2,7 @@ import { services } from '~/data/services'
 
 export const Footer = () => {
   return (
-    <div className="flex flex-col items-center gap-4 bg-zinc-100 p-8 md:px-24 xl:px-36">
+    <div className="flex flex-col items-center gap-4 bg-zinc-100 p-4 sm:p-8 md:px-24 xl:px-36">
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 xl:grid-cols-[2fr_1fr_1fr_1fr] xl:gap-8">
         <div className="flex flex-col gap-2 md:col-span-3 xl:col-span-1">
           <div className="font-bold">About us</div>

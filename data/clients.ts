@@ -8,19 +8,13 @@ import {
   HeartPulse,
   Home,
   Landmark,
-  LucideProps,
   Monitor,
   Package,
   ShoppingBag,
   Utensils,
 } from 'lucide-react'
 
-export const clients: {
-  title: string
-  href: string
-  description: string
-  icon: React.ForwardRefExoticComponent<Omit<LucideProps, 'ref'> & React.RefAttributes<SVGSVGElement>>
-}[] = [
+export const clients = [
   {
     title: 'Residential',
     href: '/clients/residential',

@@ -17,7 +17,7 @@ import { services } from '~/data/services'
 
 export const NavBar = () => {
   return (
-    <div className="hidden w-full items-baseline gap-0 px-4 py-6 lg:flex">
+    <div className="hidden w-full items-baseline gap-0 px-4 py-6 md:flex">
       <div className="flex-shrink-0 font-logo text-2xl font-black text-teal-600">Optimus Security Services</div>
       <div className="ml-8 mr-4 w-[0.1rem] self-stretch bg-accent-foreground"></div>
       <NavigationMenu>
