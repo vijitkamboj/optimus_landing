@@ -17,7 +17,7 @@ import { services } from '~/data/services'
 
 export const NavBar = () => {
   return (
-    <div className="flex w-full items-baseline gap-0 bg-red-300 px-4 py-6">
+    <div className="hidden w-full items-baseline gap-0 px-4 py-6 lg:flex">
       <div className="flex-shrink-0 font-logo text-2xl font-black text-teal-600">Optimus Security Services</div>
       <div className="ml-8 mr-4 w-[0.1rem] self-stretch bg-accent-foreground"></div>
       <NavigationMenu>
@@ -31,7 +31,7 @@ export const NavBar = () => {
           <NavigationMenuItem>
             <NavigationMenuTrigger>Services</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-2 p-4 md:w-[500px] md:grid-cols-3 lg:w-[600px]">
+              <ul className="grid w-[600px] grid-cols-3 p-3">
                 {services.map((component) => (
                   <ListItem icon={component.icon} key={component.title} title={component.title} href={component.href}>
                     {component.description}
@@ -44,7 +44,7 @@ export const NavBar = () => {
           <NavigationMenuItem>
             <NavigationMenuTrigger>Clients</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-2 p-4 md:w-[500px] md:grid-cols-3 lg:w-[600px]">
+              <ul className="grid w-[655px] grid-cols-4 p-3 xl:w-[800px]">
                 {clients.map((component) => (
                   <ListItem icon={component.icon} key={component.title} title={component.title} href={component.href}>
                     {component.description}
