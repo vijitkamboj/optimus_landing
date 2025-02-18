@@ -43,11 +43,11 @@ const items = [
 export function AppSidebar() {
   return (
     <div className="md:hidden">
-      <div className="flex h-16 items-center justify-between pl-8 pr-2">
+      <div className="flex h-16 items-center justify-between px-8">
         <div className="text-2md flex-shrink-0 font-logo text-xl font-black text-teal-600">
           Optimus Security Services
         </div>
-        <SidebarTrigger />
+        <SidebarTrigger className="size-auto" />
       </div>
       <Sidebar variant="sidebar" side="right">
         <SidebarContent>
