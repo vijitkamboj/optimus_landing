@@ -33,7 +33,7 @@ export const NavBar = () => {
           <NavigationMenuItem>
             <NavigationMenuTrigger>Services</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[600px] grid-cols-3 p-3">
+              <ul className="grid w-[400px] grid-cols-2 p-3 lg:w-[600px] lg:grid-cols-3">
                 {services.map((component) => (
                   <ListItem icon={component.icon} key={component.title} title={component.title} href={component.href}>
                     {component.description}
@@ -46,7 +46,7 @@ export const NavBar = () => {
           <NavigationMenuItem>
             <NavigationMenuTrigger>Clients</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[655px] grid-cols-4 p-3 xl:w-[800px]">
+              <ul className="grid w-[400px] grid-cols-2 p-3 lg:w-[700px] lg:grid-cols-3">
                 {clients.map((component) => (
                   <ListItem icon={component.icon} key={component.title} title={component.title} href={component.href}>
                     {component.description}
