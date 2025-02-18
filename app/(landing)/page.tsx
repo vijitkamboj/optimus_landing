@@ -43,8 +43,8 @@ export default function HomePage() {
           className="pointer-events-none absolute inset-0 bg-[url(/texture.svg)] bg-center bg-repeat opacity-5"
           aria-hidden="true"
         ></div>
-        <div className="z-10 p-2 text-2xl font-bold md:text-3xl">Range of services</div>
-        <div className="z-10 grid grid-cols-1 justify-items-center gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="p-2 text-2xl font-bold md:text-3xl">Range of services</div>
+        <div className="grid grid-cols-1 justify-items-center gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {services.map((service) => (
             <ServiceCard
               key={service.title}
@@ -58,7 +58,7 @@ export default function HomePage() {
       </div>
 
       {/* Different sectors */}
-      <div className="grid grid-cols-1 items-center gap-6 bg-gradient-to-tr from-teal-900 to-zinc-100 p-6 px-4 md:grid-cols-[1fr_2fr] md:gap-10 md:p-12 md:px-36">
+      <div className="grid grid-cols-1 items-center gap-6 bg-gradient-to-tr from-teal-900 to-zinc-100 p-8 md:grid-cols-[1fr_2fr] md:gap-10 md:p-12">
         <div className="text-center font-logo text-3xl font-black md:text-left md:text-4xl">Diverse Sectors</div>
 
         <div className="space-y-4">
@@ -108,7 +108,7 @@ const ServiceCard = ({
   link: string
 }) => {
   return (
-    <div className="roup-hover: group grid h-96 w-72 grid-rows-[1.5fr_0fr_1fr_0fr] gap-2 bg-zinc-100 transition-transform lg:hover:scale-[1.03]">
+    <div className="group grid h-96 w-72 grid-rows-[1.5fr_0fr_1fr_0fr] gap-2 bg-zinc-100 transition-transform lg:hover:scale-[1.03]">
       <div>
         <Image src={image} alt={title} placeholder="blur" />
       </div>
