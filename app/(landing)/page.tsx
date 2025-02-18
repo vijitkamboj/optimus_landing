@@ -17,7 +17,7 @@ export default function HomePage() {
           <Image
             src={HeroImage}
             alt="security"
-            quality={100}
+            quality={50}
             className="min-h-[400px] animate-fadein object-cover opacity-50 transition-opacity"
             placeholder="blur"
             loading="eager"
