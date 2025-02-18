@@ -17,7 +17,7 @@ export default function HomePage() {
           <Image
             src={HeroImage}
             alt="security"
-            quality={50}
+            quality={30}
             className="min-h-[400px] animate-fadein object-cover opacity-50 transition-opacity"
             placeholder="blur"
             loading="eager"
@@ -111,7 +111,7 @@ const ServiceCard = ({
   return (
     <div className="group grid h-96 w-72 grid-rows-[1.5fr_0fr_1fr_0fr] gap-2 bg-zinc-100 transition-transform lg:hover:scale-[1.03]">
       <div>
-        <Image src={image} alt={title} placeholder="blur" />
+        <Image src={image} alt={title} placeholder="blur" quality={30} />
       </div>
       <div className="px-4 font-semibold">{title}</div>
       <div className="line-clamp-6 px-4 text-sm text-muted-foreground">{description}</div>
