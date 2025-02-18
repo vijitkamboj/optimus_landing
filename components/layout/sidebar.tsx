@@ -11,6 +11,8 @@ import {
   SidebarTrigger,
 } from '~/components/ui/sidebar'
 
+import { Fragment } from 'react'
+
 // Menu items.
 const items = [
   {
@@ -42,8 +44,14 @@ const items = [
 
 export function AppSidebar() {
   return (
-    <div>
-      <Sidebar>
+    <Fragment>
+      <div className="flex h-12 items-center justify-between pl-4 pr-2">
+        <div className="text-2md flex-shrink-0 font-logo text-lg font-black text-teal-600">
+          Optimus Security Services
+        </div>
+        <SidebarTrigger />
+      </div>
+      <Sidebar variant="sidebar">
         <SidebarContent>
           <SidebarGroup>
             <SidebarGroupLabel>Application</SidebarGroupLabel>
@@ -64,7 +72,6 @@ export function AppSidebar() {
           </SidebarGroup>
         </SidebarContent>
       </Sidebar>
-      <SidebarTrigger className="absolute right-0 top-0" />
-    </div>
+    </Fragment>
   )
 }

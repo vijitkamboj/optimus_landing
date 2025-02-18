@@ -1,18 +1,19 @@
 'use client'
 
 import * as React from 'react'
-import { Slot } from '@radix-ui/react-slot'
-import { VariantProps, cva } from 'class-variance-authority'
-import { PanelLeft } from 'lucide-react'
 
-import { useIsMobile } from '~/hooks/use-mobile'
-import { cn } from '~/lib/utils'
+import { Sheet, SheetContent, SheetTitle } from '~/components/ui/sheet'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '~/components/ui/tooltip'
+import { VariantProps, cva } from 'class-variance-authority'
+
 import { Button } from '~/components/ui/button'
 import { Input } from '~/components/ui/input'
+import { MenuIcon } from 'lucide-react'
 import { Separator } from '~/components/ui/separator'
-import { Sheet, SheetContent } from '~/components/ui/sheet'
 import { Skeleton } from '~/components/ui/skeleton'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '~/components/ui/tooltip'
+import { Slot } from '@radix-ui/react-slot'
+import { cn } from '~/lib/utils'
+import { useIsMobile } from '~/hooks/use-mobile'
 
 const SIDEBAR_COOKIE_NAME = 'sidebar_state'
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
@@ -155,6 +156,7 @@ const Sidebar = React.forwardRef<
   if (isMobile) {
     return (
       <Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>
+        <SheetTitle></SheetTitle>
         <SheetContent
           data-sidebar="sidebar"
           data-mobile="true"
@@ -218,7 +220,7 @@ const Sidebar = React.forwardRef<
 })
 Sidebar.displayName = 'Sidebar'
 
-const SidebarTrigger = React.forwardRef<React.ElementRef<typeof Button>, React.ComponentProps<typeof Button>>(
+const SidebarTrigger = React.forwardRef<React.ComponentRef<typeof Button>, React.ComponentProps<typeof Button>>(
   ({ className, onClick, ...props }, ref) => {
     const { toggleSidebar } = useSidebar()
 
@@ -228,15 +230,15 @@ const SidebarTrigger = React.forwardRef<React.ElementRef<typeof Button>, React.C
         data-sidebar="trigger"
         variant="ghost"
         size="icon"
-        className={cn('h-7 w-7', className)}
+        className={cn(className)}
         onClick={(event) => {
           onClick?.(event)
           toggleSidebar()
         }}
         {...props}
       >
-        <PanelLeft />
-        <span className="sr-only">Toggle Sidebar</span>
+        <MenuIcon />
+        {/* <span className="sr-only">Toggle Sidebar</span> */}
       </Button>
     )
   },
