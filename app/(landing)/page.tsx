@@ -63,14 +63,14 @@ export default function HomePage() {
         <div className="text-center font-logo text-3xl font-black md:text-left md:text-4xl">Diverse Sectors</div>
 
         <div className="space-y-4">
-          <p className="text-sm md:text-base">
+          <p>
             We specialize in providing top-notch security services across diverse sectors, leveraging our expertise and
             industry experience. Our services cater to renowned industries such as <Highlight>Automobile</Highlight>,{' '}
             <Highlight>Food & Beverage</Highlight>, <Highlight>Finance</Highlight>, <Highlight>Electronics</Highlight>,{' '}
             <Highlight>Real Estate</Highlight>, <Highlight>Healthcare</Highlight>, and <Highlight>Education</Highlight>.
           </p>
 
-          <p className="text-sm md:text-base">
+          <p>
             In the <Highlight>Automobile</Highlight> sector, we ensure precision and protection, while in{' '}
             <Highlight>Finance and Banking</Highlight>, we deliver unmatched security for assets and operations. We
             safeguard high-value assets in <Highlight>Electronics</Highlight>, ensure safe environments in{' '}
@@ -78,7 +78,7 @@ export default function HomePage() {
             and <Highlight>Education</Highlight>.
           </p>
 
-          <p className="text-sm md:text-base">
+          <p>
             Our tailored solutions address the unique needs of each sector, making us a trusted partner for safety and
             security across industries.
           </p>
@@ -113,7 +113,7 @@ const ServiceCard = ({
       <div>
         <Image src={image} alt={title} placeholder="blur" quality={30} />
       </div>
-      <div className="px-4 font-semibold">{title}</div>
+      <div className="px-4 text-lg font-semibold">{title}</div>
       <div className="line-clamp-6 px-4 text-sm text-muted-foreground">{description}</div>
       <Button variant={'link'} className="justify-end p-0 px-4 hover:cursor-pointer group-hover:underline" asChild>
         <Link href={link}>Learn more</Link>
