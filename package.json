@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "pnpm dlx prettier --write ."
+    "prettier": "pnpm dlx prettier --write .",
+    "generate-pages": "tsx scripts/generate-pages.ts",
+    "fix-pages": "tsx scripts/fix-page-imports.ts"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.6",
@@ -40,6 +42,7 @@
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "tailwindcss-debug-screens": "^2.2.1",
+    "tsx": "^4.19.3",
     "typescript": "^5"
   }
 }
