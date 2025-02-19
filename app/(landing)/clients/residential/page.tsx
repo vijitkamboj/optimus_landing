@@ -14,7 +14,7 @@ export default function ResidentialPage() {
     <main className="container mx-auto px-4 py-8">
       {/* Hero Section */}
       <div className="mb-12 flex items-center gap-4">
-        <div className="rounded-lg bg-primary/10 p-3">
+        <div className="rounded-lg bg-muted p-3">
           <Home className="h-8 w-8 text-primary" />
         </div>
         <h1 className="text-4xl font-bold">Residential Security</h1>
@@ -52,7 +52,7 @@ export default function ResidentialPage() {
                 className="group rounded-lg border p-6 transition-colors hover:border-primary hover:bg-primary/5"
               >
                 <div className="mb-4 flex items-center gap-4">
-                  <div className="rounded-lg bg-primary/10 p-2">
+                  <div className="rounded-lg bg-muted p-2">
                     <service.icon className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-semibold">{service.title}</h3>
